@@ -21,11 +21,22 @@ This project demonstrates deploying a scalable WordPress application on **Amazon
 
 ##  Architecture
 
-User → AWS LoadBalancer → Kubernetes Service → Pods (WordPress)
-↓
-HPA (Auto Scaling)
-↓
-Metrics Server (CPU Monitoring)
+            User
+              │
+              ▼
+    AWS LoadBalancer
+              │
+              ▼
+    Kubernetes Service
+              │
+              ▼
+     Pods (WordPress)
+              │
+              ▼
+    HPA (Auto Scaling)
+              │
+              ▼
+ Metrics Server (CPU Monitoring)
 
 ---
 
